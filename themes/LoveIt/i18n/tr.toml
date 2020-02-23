@@ -8,7 +8,7 @@ other = "Yazılar"
 
 # === Taxonomy ===
 [all]
-other = "hepsi "
+other = "tüm "
 
 [tag]
 other = "Etiket"
@@ -59,7 +59,7 @@ other = "İçerikler"
 other = "tarihinde yayınlandı"
 
 [included]
-other = "dahil"
+other = " "
 
 [wordCount]
 other = "yaklaşık {{ .Count }} kelime"
