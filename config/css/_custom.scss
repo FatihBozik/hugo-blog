@@ -2,6 +2,10 @@
 // Custom style
 // ==============================
 
+.dark-theme .single .content .table-wrapper>table {
+  background: $global-background-color-dark;
+}
+
 .single .content .table-wrapper > table th, .single .content .table-wrapper > table td {
   border: none;
 
@@ -10,37 +14,41 @@
   }
 }
 
+.dark-theme .gist .pl-c1, .dark-theme .gist .pl-s .pl-v {
+  color: #E0957B;
+}
+
 .gist .gist-file {
   border: none !important;
 }
 
 .gist .pl-pds, .gist .pl-s, .gist .pl-s .pl-pse .pl-s1, .gist .pl-sr, .gist .pl-sr .pl-cce, .gist .pl-sr .pl-sra, .gist .pl-sr .pl-sre {
   .dark-theme & {
-    color: #ffab70;
+    color: #62A362;
   }
 }
 
 .gist .pl-e, .gist .pl-en {
   .dark-theme & {
-    color: #9e72ef;
+    color: #C9C9D1;
   }
 }
 
 .gist .pl-smw, .gist .pl-v {
   .dark-theme & {
-    color: #a9a9b3;
+    color: #C9C9D1;
   }
 }
 
 .gist .pl-c1, .gist .pl-s .pl-v {
   .dark-theme & {
-    color: #608dbf;
+    color: #4DACF0;
   }
 }
 
 .gist .pl-k {
   .dark-theme & {
-    color: #f97583;
+    color: #E0957B;
   }
 }
 
@@ -58,7 +66,7 @@
   color: $global-font-color !important;
 
   .dark-theme & {
-    color: $global-font-color-dark !important;
+    color: #C9C9D1 !important;
   }
 }
 
@@ -75,13 +83,13 @@
 
   .dark-theme & {
     background: $global-background-color-dark !important;
-    color: $global-font-color-dark !important;
+    color: #575567 !important;
   }
 }
 
 .gist .pl-smi {
   .dark-theme & {
-    color: $global-font-color-dark !important;
+    color: #C9C9D1 !important;
   }
 }
 
@@ -94,3 +102,8 @@
   }
 }
 
+.gist .gist-meta a {
+  .dark-theme & {
+    color: #a9a9b3 !important;
+  }
+}
