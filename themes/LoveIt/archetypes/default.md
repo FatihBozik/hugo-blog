@@ -3,21 +3,22 @@ title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
+author: ""
+authorLink: ""
 description: ""
-show_in_homepage: true
-show_description: false
-license: ''
+license: ""
 
 tags: []
 categories: []
+hiddenFromHomePage: false
 
-featured_image: ''
-featured_image_preview: ''
+featuredImage: ""
+featuredImagePreview: ""
 
-comment: true
 toc: false
 autoCollapseToc: true
 math: false
+comment: true
 ---
 
 <!--more-->

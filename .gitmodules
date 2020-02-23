@@ -3,3 +3,6 @@
 	path = public
 	url = git@github.com:fatihbozik/fatihbozik.github.io.git
 	branch = master
+[submodule "themes/LoveIt/themes/LoveIt"]
+	path = themes/LoveIt/themes/LoveIt
+	url = https://github.com/dillonzq/LoveIt.git

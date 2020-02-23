@@ -1,32 +1,38 @@
-<div class="home-intro">
-    {{ $avatar := "" }}
-    {{ if .Site.Params.gravatar.email }}
-        {{ $avatar = (printf "https://www.gravatar.com/avatar/%s?s=240&d=mp" (md5 .Site.Params.gravatar.email)) }}
-    {{ else if .Site.Params.avatar }}
-        {{ $avatar = .Site.Params.avatar }}
-    {{ end }}
-    {{ if $avatar }}
+<div class="home-profile">
+    {{- $avatar := .Site.Params.home.profile.avatarURL -}}
+    {{- with .Site.Params.home.profile.gravatarEmail -}}
+        {{- $avatar = md5 . | printf "https://www.gravatar.com/avatar/%s?s=240&d=mp" -}}
+    {{- end -}}
+    {{- with $avatar -}}
         <div class="home-avatar">
             <a href="/posts">
-                <img src={{ $avatar | relURL }} alt="avatar">
+                <img src={{ . | relURL }} alt="avatar" title="{{ T "home" }}">
             </a>
         </div>
-    {{ end }}
+    {{- end -}}
 
-    {{ with .Site.Params.subtitle }}
+    {{- with .Site.Params.home.profile.subtitle -}}
         <h2 class="home-description">
-            {{ $id := md5 . | printf "tp-%s" }}
-            <div id={{ printf "r%s" $id }} hidden=true>{{ . | safeHTML }}</div>
-            <div id={{ $id }} class="typeit"></div>
-            {{ with $.Scratch.Get "typeitMap" }}
-                {{ $.Scratch.Set "typeitMap" (dict $id (slice $id) | merge .) }}
-            {{ else }}
-                {{ $.Scratch.Set "typeitMap" (dict $id (slice $id)) }}
-            {{ end }}
+            {{- if $.Site.Params.home.profile.typeit -}}
+                {{- $id := md5 . | printf "tp-%s" -}}
+                <div id={{ printf "r%s" $id }} hidden=true>
+                    {{- /* FIXME: https://github.com/gohugoio/hugo/issues/6882 */ -}}
+                    {{- /* . | $.RenderString | safeHTML */ -}}
+                    {{- . | markdownify | safeHTML -}}
+                </div>
+                <div id={{ $id }} class="typeit"></div>
+                {{- $.Scratch.SetInMap "typeitMap" $id (slice $id) -}}
+            {{- else -}}
+                {{- /* FIXME: https://github.com/gohugoio/hugo/issues/6882 */ -}}
+                {{- /* . | $.RenderString | safeHTML */ -}}
+                {{- . | markdownify | safeHTML -}}
+            {{- end -}}
         </h2>
-    {{ end }}
+    {{- end -}}
 
     <div class="home-social-links">
-        {{ partial "home/social.html" . }}
+        {{- if .Site.Params.home.profile.social -}}
+            {{- partial "plugin/social.html" . -}}
+        {{- end -}}
     </div>
 </div>

@@ -1,0 +1,116 @@
+# Translations for Turkish
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === Post ===
+[posts]
+other = "Yazılar"
+# === Post ===
+
+# === Taxonomy ===
+[all]
+other = "hepsi "
+
+[tag]
+other = "Etiket"
+
+[tags]
+other = "Etiketler"
+
+[category]
+other = "Kategori"
+
+[categories]
+other = "Kategoriler"
+# === Taxonomy ===
+
+# === Pagination ===
+[more]
+other = "Daha fazla"
+# === Pagination ===
+
+# === partials/header.html ===
+[switchTheme]
+other = "Temayı Değiştir"
+# === partials/header.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "tr"
+# === partials/comment.html ===
+
+# === partials/footer.html ===
+[powered]
+other = "%s tarafından desteklenmektedir."
+
+[theme]
+other = "Tema - "
+# === partials/footer.html ===
+
+# === partials/plugin/share.html ===
+[share]
+other = "Paylaş"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[toc]
+other = "İçerikler"
+
+[publish]
+other = "tarihinde yayınlandı"
+
+[included]
+other = "dahil"
+
+[wordCount]
+other = "yaklaşık {{ .Count }} kelime"
+
+[readingTime]
+other = "{{ .Count }} dakika"
+
+[pageviews]
+other = "<span class=leancloud-visitors-count></span> sayfa görüntülenmesi"
+
+[author]
+other = "Yazar"
+
+[lastMod]
+other = "Makale %s tarihinde güncellendi."
+
+[license]
+other = "%s lisansı altında yayınlandı"
+
+[seeMarkdown]
+other = "Markdown olarak oku"
+
+[back]
+other = "Geri"
+
+[home]
+other = "Anasayfa"
+
+[readMore]
+other = "Daha fazla oku"
+
+[day]
+other = "g"
+
+[hour]
+other = "sa"
+
+[minute]
+other = "dk"
+
+[second]
+other = "san"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Sayfa bulunamadı"
+
+[pageNotFoundText]
+other = "Aradığınız sayfa mevcut değil"
+
+[backToHome]
+other = "Anasayfaya Dön"
+# === 404.html ===
